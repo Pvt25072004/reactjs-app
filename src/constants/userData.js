@@ -8,6 +8,7 @@
 //   name: "Admin User",
 //   password: "admin123",
 // };
+
 const userData = {
   name: "John Doe",
   age: 30,
@@ -18,4 +19,7 @@ const adminData = {
   name: "Admin User",
   password: "admin123",
 };
-export { userData, adminData };
+
+const yearOfExperiences = ["Intern", "Fresher", "Middle", "Junior", "Senior"];
+
+export { userData, adminData, yearOfExperiences };

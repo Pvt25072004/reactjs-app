@@ -1,9 +1,18 @@
-import { userData, adminData } from "./constants/userData.js";
-import imageProgramming from "../public/images/programming.avif";
-const yearOfExperiences = ["Fresher", "Middle", "Junior", "Senior"];
-const randomIndex = (num) => Math.floor(Math.random() * num);
+import {
+  userData,
+  adminData,
+  yearOfExperiences,
+} from "./constants/userData.js";
+import imageProgramming from "./assets/images/programming.avif";
+import jsLanguage from "./assets/images/js.avif";
+import CoreConcept from "./components/coreConcept.jsx";
+
 const Header = () => {
+  const randomIndex = (num) => Math.floor(Math.random() * num);
   const yoe = yearOfExperiences[randomIndex(yearOfExperiences.length)];
+  const alertClick = () => {
+    alert("You clicked me!");
+  };
   return (
     <header>
       <h1>Welcome to My Website</h1>
@@ -20,6 +29,12 @@ const Header = () => {
         <li>Name: {adminData.name}</li>
         <li>Password: {adminData.password}</li>
       </ul>
+      <CoreConcept
+        heading="Javascript"
+        des="This is a basic course about js"
+        image={jsLanguage}
+        notify={alertClick}
+      />
     </header>
   );
 };
