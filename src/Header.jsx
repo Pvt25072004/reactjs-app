@@ -2,6 +2,7 @@ import {
   userData,
   adminData,
   yearOfExperiences,
+  customerData,
 } from "./constants/userData.js";
 import imageProgramming from "./assets/images/programming.avif";
 import jsLanguage from "./assets/images/js.avif";
@@ -46,7 +47,7 @@ const Header = () => {
       {cardData.map((card, index) => (
         <Card key={index} {...card} />
       ))}
-      <UserCard user={userData} />
+      <UserCard user={customerData} />
     </header>
   );
 };

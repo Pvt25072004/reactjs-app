@@ -3,7 +3,11 @@ const UserCard = ({ user }) => {
     <div>
       <h3>User Card Component</h3>
       <span>{user.name}</span>
-      <p>{user.purchaseHistory.join(", ")}</p>
+      <ul>
+        {user.purchaseHistory.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
       <button onClick={() => console.log(user.purchaseHistory)}>click</button>
     </div>
   );
