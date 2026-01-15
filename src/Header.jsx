@@ -8,12 +8,14 @@ import jsLanguage from "./assets/images/js.avif";
 import CoreConcept from "./components/coreConcept.jsx";
 import Card from "./components/card.jsx";
 import { cardData } from "./constants/cardData.js";
+import UserCard from "./components/userCard.jsx";
 
 const Header = () => {
   const randomIndex = (num) => Math.floor(Math.random() * num);
   const yoe = yearOfExperiences[randomIndex(yearOfExperiences.length)];
   const alertClick = () => {
     alert("You clicked me!");
+    console.log(cardData);
   };
   return (
     <header>
@@ -41,6 +43,10 @@ const Header = () => {
       {/* rest in array */}
       <Card {...cardData[1]} />
       <Card {...cardData[2]} />
+      {cardData.map((card, index) => (
+        <Card key={index} {...card} />
+      ))}
+      <UserCard user={userData} />
     </header>
   );
 };

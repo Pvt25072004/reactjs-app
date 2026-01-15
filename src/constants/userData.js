@@ -20,6 +20,10 @@ const adminData = {
   password: "admin123",
 };
 
+const customerData = {
+  name: "Customer User",
+  purchaseHistory: ["item1", "item2", "item3"],
+};
 const yearOfExperiences = ["Intern", "Fresher", "Middle", "Junior", "Senior"];
 
-export { userData, adminData, yearOfExperiences };
+export { userData, adminData, yearOfExperiences, customerData };
