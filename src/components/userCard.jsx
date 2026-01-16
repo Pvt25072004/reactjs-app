@@ -8,7 +8,7 @@ const UserCard = ({ user }) => {
           <li key={index}>{item}</li>
         ))}
       </ul>
-      <button onClick={() => console.log(user.purchaseHistory)}>click</button>
+      <button onClick={() => console.log(user)}>click</button>
     </div>
   );
 };
