@@ -34,8 +34,12 @@ function App() {
       <section>
         <h2>Tab Buttons</h2>
         <menu>
-          <TabButton label="Home" />
-          <TabButton label="Product" />
+          <TabButton label="Home">
+            <h2>Home</h2>
+          </TabButton>
+          <TabButton label="Product">
+            <h2>Product</h2>
+          </TabButton>
 
           {/* <TabButton>Home</TabButton>
           <TabButton>Product</TabButton> */}
