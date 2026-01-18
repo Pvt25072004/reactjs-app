@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Header from "./Header.jsx";
+import TabButton from "./components/tabButton.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,6 +31,16 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <Header />
+      <section>
+        <h2>Tab Buttons</h2>
+        <menu>
+          <TabButton label="Home" />
+          <TabButton label="Product" />
+
+          {/* <TabButton>Home</TabButton>
+          <TabButton>Product</TabButton> */}
+        </menu>
+      </section>
     </>
   );
 }
