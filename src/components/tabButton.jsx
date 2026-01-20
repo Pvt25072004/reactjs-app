@@ -1,11 +1,18 @@
-// export default function TabButton(props) {
-//   return <button>{props.children}</button>;
-// }
-export default function TabButton({ label, children }) {
+export default function TabButton(props) {
+  const handleClick = () => {
+    console.log("This is a log when you click btn");
+  };
   return (
-    <button>
-      {label}
-      {children}
-    </button>
+    <div>
+      <button onClick={props.onClickHandled}>{props.label}</button>
+    </div>
   );
 }
+// export default function TabButton({ label, children }) {
+//   return (
+//     <button>
+//       {label}
+//       {children}
+//     </button>
+//   );
+// }
