@@ -1,4 +1,4 @@
-const FormUserLogin = (props) => {
+const InputFlied = (props) => {
   return (
     <div>
       <input
@@ -12,4 +12,4 @@ const FormUserLogin = (props) => {
     </div>
   );
 };
-export default FormUserLogin;
+export default InputFlied;
