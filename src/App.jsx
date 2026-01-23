@@ -7,7 +7,13 @@ import TabButton from "./components/tabButton.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const [text, setText] = useState("");
+  const onClickHandle = (n) => () => setText(n);
+  const tabText = {
+    1: "Home button clicked",
+    2: "Product button clicked",
+    3: "Cart button clicked",
+  };
   return (
     <>
       <div>
@@ -30,21 +36,24 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <Header />
       <section>
         <h2>Tab Buttons</h2>
         <menu>
-          <TabButton label="Home">
-            <h2>Home</h2>
+          <TabButton label="Home" onClickHandled={onClickHandle(1)}>
+            {text}
           </TabButton>
-          <TabButton label="Product">
-            <h2>Product</h2>
+          <TabButton label="Product" onClickHandled={onClickHandle(2)}>
+            {text}
           </TabButton>
-
+          <TabButton label="Cart" onClickHandled={onClickHandle(3)}>
+            {text}
+          </TabButton>
+          <p>{text ? tabText[text] : ""}</p>
           {/* <TabButton>Home</TabButton>
           <TabButton>Product</TabButton> */}
         </menu>
       </section>
+      <Header />
     </>
   );
 }
