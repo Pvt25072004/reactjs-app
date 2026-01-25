@@ -3,15 +3,18 @@ import "./App.css";
 import Header from "./Header.jsx";
 import TabButton from "./components/tabButton.jsx";
 import InputFlied from "./hooks/formData.jsx";
+import { CourseData } from "./constants/courseData.js";
 
 function App() {
   const [text, setText] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
+  const [course, setCourse] = useState();
 
   const onClickHandle = (selected, e) => {
     e.preventDefault();
-    setText(selected);
+    // setText(selected);
+    setCourse(selected);
   };
   // const onClickHandle = (n) => () => setText(n);
   const tabText = {
@@ -23,6 +26,7 @@ function App() {
     e.preventDefault();
     console.log(username, password);
   };
+  console.log("app");
   return (
     <>
       <section>
@@ -65,8 +69,16 @@ function App() {
             <TabButton label="Cart" onClickHandled={onClickHandle(3)} />
           </div> */}
         </div>
-
-        <p>{text}</p>
+        {course ? (
+          <div>
+            <title>{CourseData[course].title}</title>
+            <p>{CourseData[course].description}</p>
+            <span>{CourseData[course].price}</span>
+          </div>
+        ) : (
+          "Please choose a course"
+        )}
+        {/* <p>{text}</p> */}
         {/* <p>{text ? tabText[text] : ""}</p> */}
         {/* <TabButton>Home</TabButton>
           <TabButton>Product</TabButton> */}

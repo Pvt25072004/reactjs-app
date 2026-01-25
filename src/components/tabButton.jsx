@@ -2,6 +2,7 @@ export default function TabButton(props) {
   const handleClick = () => {
     console.log("This is a log when you click btn");
   };
+  console.log("tab");
   return (
     <div>
       <button
