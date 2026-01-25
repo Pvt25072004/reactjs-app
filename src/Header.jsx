@@ -44,8 +44,8 @@ const Header = () => {
       {/* rest in array */}
       <Card {...cardData[1]} />
       <Card {...cardData[2]} />
-      {cardData.map((card, index) => (
-        <Card key={index} {...card} />
+      {cardData.map((card) => (
+        <Card key={card.title} {...card} />
       ))}
       <UserCard user={customerData} />
     </header>
