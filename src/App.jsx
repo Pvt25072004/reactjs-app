@@ -5,7 +5,7 @@ import TabButton from "./components/tabButton.jsx";
 import InputFlied from "./hooks/formData.jsx";
 
 function App() {
-  const [text, setText] = useState("Home page");
+  const [text, setText] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
 
@@ -30,6 +30,7 @@ function App() {
         <div className="row">
           <div className="col">
             <TabButton
+              isSelected={text === "Home page"}
               label="Home"
               onClickHandled={(e) => {
                 onClickHandle("Home page", e);
@@ -38,6 +39,7 @@ function App() {
           </div>
           <div className="col">
             <TabButton
+              isSelected={text === "Product page"}
               label="Product"
               onClickHandled={(e) => {
                 onClickHandle("Product page", e);
@@ -46,6 +48,7 @@ function App() {
           </div>
           <div className="col">
             <TabButton
+              isSelected={text === "Cart page"}
               label="Cart"
               onClickHandled={(e) => {
                 onClickHandle("Cart page", e);

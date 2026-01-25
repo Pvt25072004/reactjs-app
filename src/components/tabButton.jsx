@@ -4,7 +4,12 @@ export default function TabButton(props) {
   };
   return (
     <div>
-      <button onClick={props.onClickHandled}>{props.label}</button>
+      <button
+        className={props.isSelected ? "active" : ""}
+        onClick={props.onClickHandled}
+      >
+        {props.label}
+      </button>
     </div>
   );
 }
