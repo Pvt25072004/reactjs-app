@@ -1,6 +1,7 @@
+import { Fragment } from "react";
 const InputFlied = (props) => {
   return (
-    <div>
+    <Fragment>
       <input
         type={props.type}
         name={props.name}
@@ -9,7 +10,7 @@ const InputFlied = (props) => {
         value={props.value}
         onChange={props.onChange}
       />
-    </div>
+    </Fragment>
   );
 };
 export default InputFlied;
