@@ -1,6 +1,7 @@
 import TabButton from "../components/tabButton.jsx";
 import { useState } from "react";
 import { CourseData } from "../constants/courseData.js";
+import Section from "../components/section.jsx";
 const Navbar = () => {
   const [text, setText] = useState("");
   const [course, setCourse] = useState();
@@ -17,14 +18,13 @@ const Navbar = () => {
   };
   return (
     <>
-      <section>
-        <h2>Tab Buttons</h2>
+      <Section title="Tab Buttons">
         <div className="row">
           <div className="col">
             <TabButton
               isSelected={text === "Home page"}
               label="Home"
-              onClickHandled={(e) => {
+              onClick={(e) => {
                 onClickHandle("Home page", e);
               }}
             />
@@ -33,7 +33,7 @@ const Navbar = () => {
             <TabButton
               isSelected={text === "Product page"}
               label="Product"
-              onClickHandled={(e) => {
+              onClick={(e) => {
                 onClickHandle("Product page", e);
               }}
             />
@@ -42,7 +42,7 @@ const Navbar = () => {
             <TabButton
               isSelected={text === "Cart page"}
               label="Cart"
-              onClickHandled={(e) => {
+              onClick={(e) => {
                 onClickHandle("Cart page", e);
               }}
             />
@@ -70,7 +70,7 @@ const Navbar = () => {
         {/* <p>{text ? tabText[text] : ""}</p> */}
         {/* <TabButton>Home</TabButton>
           <TabButton>Product</TabButton> */}
-      </section>
+      </Section>
     </>
   );
 };

@@ -5,13 +5,13 @@ export const CourseData = {
     price: 100,
   },
   "Product page": {
-    title: "React Course",
-    description: "Learn React from scratch",
+    title: "TS Course",
+    description: "Learn TypeScript from scratch",
     price: 200,
   },
   "Cart page": {
-    title: "React Course",
-    description: "Learn React from scratch",
+    title: "Next Course",
+    description: "Learn Next.js from scratch",
     price: 130,
   },
 };

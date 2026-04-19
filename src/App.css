@@ -27,7 +27,8 @@
   }
 }
 .active {
-  color: #646cffaa;
+  color: #7a0252;
+  background-color: aqua;
 }
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
