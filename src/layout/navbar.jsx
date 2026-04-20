@@ -21,6 +21,8 @@ const Navbar = () => {
     <>
       <Section title="Tab Buttons">
         <Tabs
+          // ButtonsContainer={Section}
+          // ButtonsContainer="menu"
           buttons={
             <>
               <div className="row">
