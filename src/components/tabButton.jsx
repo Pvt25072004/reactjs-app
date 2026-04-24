@@ -1,15 +1,12 @@
-export default function TabButton(props) {
+export default function TabButton({ label, isSelected, ...props }) {
   const handleClick = () => {
     console.log("This is a log when you click btn");
   };
   console.log("tab");
   return (
     <div>
-      <button
-        className={props.isSelected ? "active" : ""}
-        onClick={props.onClickHandled}
-      >
-        {props.label}
+      <button className={isSelected ? "active" : ""} {...props}>
+        {label}
       </button>
     </div>
   );
